@@ -38,7 +38,7 @@ RUN git clone https://github.com/digininja/CeWL.git github/CeWL && \
     ln -svf $HOME/github/CeWL/cewl.rb $HOME/bin/cewl
 
 RUN git clone https://github.com/zizzixsec/munge3.git github/Munge3 && \
-    pip install -r github/Munge3/requirements.txt && \
+    pip install --break-system-packages -r github/Munge3/requirements.txt && \
     chmod +x github/Munge3/munge3.py && \
     ln -svf $HOME/github/Munge3/munge3.py $HOME/bin/munge3
 
