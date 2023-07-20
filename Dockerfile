@@ -23,7 +23,7 @@ RUN pacman -S --noconfirm \
 WORKDIR ${HOME}
 RUN mkdir -pv bin github
 
-RUN pip install --no-cache-dir -U \
+RUN pip install --no-cache-dir --break-system-packages -U \
     pip pycryptodomex requests click termcolor cprint setuptools && \
     gem install mime mime-types mini_exiftool nokogiri rubyzip spider && \
     rm -rf .local/share/gem/ruby/3.0.0/cache/* && \
